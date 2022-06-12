@@ -1,0 +1,227 @@
+@import "./vars";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+  height: 100vh;
+  padding: 0.2em;
+}
+
+.left-side {
+  margin: 0.5em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 0.5em;
+  max-width: 35%;
+}
+
+.right-side {
+  margin: 0.5em;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+body {
+  font-family: $font;
+  background-image: $bg;
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 12em;
+  border: 3px solid $green;
+  border-radius: 50%;
+  align-self: center;
+  margin-top: -7em;
+  transition: $transition;
+  &:hover {
+    transform: scale(1.07);
+  }
+}
+
+header {
+  color: $white;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  h1 {
+    padding-left: 1.5em;
+  }
+  h2 {
+    padding-left: 2.5em;
+  }
+}
+
+.card {
+  margin-top: 7.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  div {
+    padding-top: 1em;
+    h3 {
+      color: $darkGreen;
+      font-size: 1.5rem;
+      padding-bottom: 0.5em;
+    }
+    p {
+      color: $yellow;
+    }
+  }
+}
+
+.links {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  .icons {
+    justify-content: center;
+    margin: 0.3em 0;
+
+    a {
+      transition: $transition;
+      color: $white;
+      text-decoration: none;
+      font-size: 2.5rem;
+      margin-inline: 0.4em;
+      &:hover {
+        transform: scale(1.4);
+      }
+    }
+    #facebook:hover {
+      color: #3b5998;
+    }
+    #github:hover {
+      color: black;
+    }
+    #linkedin:hover {
+      color: #0077b5;
+    }
+  }
+  p {
+    color: $white;
+    font-size: 2rem;
+  }
+  #mailTo {
+    align-self: center;
+    color: $white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: $transition;
+    letter-spacing: 1px;
+    &:hover {
+      letter-spacing: 3px;
+    }
+  }
+  .number {
+    align-self: center;
+    color: $white;
+    font-size: 1.5rem;
+    align-items: center;
+    gap: 0.5em;
+    justify-items: center;
+    i {
+      font-size: 2rem;
+    }
+  }
+}
+
+.languages {
+  margin-left: 0.2em;
+  h3 {
+    color: $darkGreen;
+    font-size: 1.5rem;
+    padding-top: 1.5em;
+    padding-bottom: 0.7em;
+  }
+  p {
+    color: $darkGreen;
+    font-size: 1.5rem;
+    margin-right: 0.5em;
+  }
+  div {
+    margin-left: 0.5em;
+    justify-items: center;
+    align-items: center;
+    span {
+      width: 30px;
+      height: 30px;
+      margin: 0.7em 1em;
+      background-color: $lightBluee;
+      border-radius: 50%;
+      border: $blue 2px solid;
+    }
+  }
+  .english {
+    span {
+      &:last-of-type {
+        background-color: $white;
+      }
+    }
+  }
+  .greek {
+    p {
+      padding-right: 0.58em;
+    }
+  }
+}
+
+.right-side {
+  padding: 1em;
+  h3 {
+    color: $headerTextGreen;
+    background-color: $lighterBlue;
+    border-radius: 40px;
+    width: fit-content;
+    padding: 0.3em 0.5em;
+    margin-bottom: 0.3em;
+    border: $blue 3px solid;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 10em;
+      background: $lightBluee;
+      top: 20px;
+      right: 5em;
+      overflow: hidden;
+    }
+  }
+}
+
+@media (max-width: 1490px) {
+  @import "./media1490";
+}
+
+@media (max-width: 1200px) {
+  @import "./media1200";
+}
+
+@media (max-width: 500px) {
+  @import "./media500";
+}
